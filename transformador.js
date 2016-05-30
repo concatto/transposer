@@ -24,8 +24,8 @@ function notaParaInt(nota) {
 }
 
 function intParaNota(valor) {
-    var intermediate = valor % 12;
-    var letterValue = (intermediate < 4) ? Math.floor(intermediate / 2.0) : Math.ceil(intermediate / 2.0);
+  var intermediate = valor % 12;
+  var letterValue = (intermediate < 4) ? Math.floor(intermediate / 2.0) : Math.ceil(intermediate / 2.0);
 	return {
         letra: String.fromCharCode(((letterValue + 2) % 7) + 'A'.charCodeAt(0)),
         sharp: intermediate % 2 == (intermediate <= 4 ? 1 : 0),
@@ -64,6 +64,9 @@ function transpor(texto, valor) {
 		novoTexto += str;
 		if (l != linhas.length - 1) novoTexto += "\n";
 	}
+	var atual = $("#transposition-value").text();
+	$("#transposition-value").text(parseInt(atual) + valor);
+
 	return novoTexto;
 }
 
@@ -110,6 +113,7 @@ function paraReal(texto) {
 
 		if (l < linhas.length - 1) stringCompleta += "\n";
 	}
+	$("#transposition-value").text("0");
 	return stringCompleta;
 }
 
@@ -160,5 +164,6 @@ function paraVirtual(texto) {
 
 		if (l < linhas.length - 1) stringCompleta += "\n";
 	}
+	$("#transposition-value").text("0");
 	return stringCompleta;
 }
