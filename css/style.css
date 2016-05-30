@@ -1,0 +1,272 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin: 0px;
+}
+
+p {
+	margin: 5px 0px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #afafaf;
+	text-shadow: #d5d5d5 0px 0px 2px;
+}
+
+a:visited {
+	color: #a3a3a3;
+	text-shadow: #c5c5c5 0px 0px 2px;
+}
+
+a:hover {
+	color: #bbbbbb;
+	text-shadow: #b5b5b5 0px 0px 3px;
+}
+
+#header {
+	background: #ffffff url("../header6.png") 0% 50% no-repeat;
+	display: block;
+	height: 137px;
+	border-bottom: #b6b6b6 2px solid;
+	width: 100%;
+}
+
+#header img {
+	margin-left: 68px;
+	margin-top: 18px;
+}
+
+#content {
+	width: auto;
+	border-left: #b6b6b6 1px solid;
+	border-bottom: #b6b6b6 1px solid;
+	padding-bottom: 6px;
+	padding-left: 20px;
+	font-size: 14px;
+	overflow: hidden;
+	background: #ffffff;
+}
+
+#main-page img {
+	margin: 15px 5px 10px;
+}
+
+#music-title {
+	color: #555555;
+}
+
+#origin-title {
+	font-size: 20px;
+	font-style: italic;
+	margin-left: 24px;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	text-shadow: 1px 0px 2px #D5D5D5;
+	color: #999999;
+	margin-bottom: 20px;
+}
+
+#sheet-wrapper {
+	font-size: 0px;
+	padding-top: 14px;
+	padding-bottom: 6px;
+}
+
+#sheet-wrapper > div {
+	display: inline-block;
+	font-size: 14px;
+	vertical-align: top;
+}
+
+.sheet-container {
+	width: 400px;
+}
+
+.sheet-container > textarea {
+	height: 520px;
+	width: 100%;
+	resize: none;
+	padding: 3px 5px;
+}
+
+.sheet-separator {
+	height: 537px;
+	width: 1px;
+	background-color: #d3d3d3;
+	margin: 16px 14px 6px;
+}
+
+.sheet-description {
+	font-size: 15px;
+	font-style: italic;
+	text-align: center;
+	color: #777777;
+	margin: 8px 0px;
+}
+
+.title {
+	font-size: 32px;
+	text-shadow: 0px 0px 1px #909090;
+	margin: 12px 0px 10px;
+}
+
+#main-title {
+	margin: 22px 0px 30px;
+}
+
+.content-body {
+	margin-bottom: 18px;
+	width: 530px;
+}
+
+#root {
+	background: #e5e5e5;
+	width: 100%;
+	min-height: 100%;
+	position: absolute;
+}
+
+#container {
+	margin-bottom: 20px;
+}
+
+form {
+	padding-top: 14px;
+	width: 500px;
+}
+
+.field-container {
+	font-size: 0px;
+	width: 100%;
+}
+
+.field-container:first-child {
+	margin-bottom: 10px;
+}
+
+.field-container > div {
+	font-size: 14px;
+}
+
+.field-container > div:first-child {
+	margin-right: 30px;
+}
+
+.field-container input {
+	width: 100%;
+	padding-left: 2px;
+}
+
+form > div > div {
+	display: inline-block;
+	width: 47%;
+}
+
+form > div > div label {
+	display: block;
+	margin: 3px 0px 4px;
+}
+
+#type-container {
+	margin: 18px 0px;
+	border: 1px solid #d2d2d2;
+	padding-bottom: 12px;
+}
+
+#type-container label {
+	display: inline;
+	margin-right: 16px;
+}
+
+form .sheet-container {
+	width: 100%;
+}
+
+form .sheet-container textarea {
+	margin-top: 4px;
+}
+
+form input[type="submit"] {
+	float: right;
+	padding: 4px 18px;
+	margin: 10px 0px;
+}
+
+#contribution {
+	font-size: 16px;
+	margin: 16px 0px 10px;
+}
+
+#virtual-piano-container {
+	position: fixed;
+	left: 4px;
+	bottom: 0;
+	z-index: 999;
+}
+
+#virtual-piano-container > div {
+	box-shadow: 0px 0px 8px #afafaf;
+	border-radius: 6px;
+	position: relative;
+	background: #ffffff;
+}
+
+#piano {
+	height: 106px;
+	width: 254px;
+	display: none;
+	padding: 0px 4px 6px;
+	margin-bottom: -4px;
+	background: #ffffff;
+	z-index: 1;
+}
+
+#piano embed {
+	height: 100%;
+	width: 100%;
+}
+
+#piano-handler {
+	padding: 4px 13px 9px;
+	margin-bottom: -10px;
+	margin-left: 4px;
+	cursor: pointer;
+	width: 120px;
+	z-index: 1;
+}
+
+#piano-handler #piano-text {
+	font-size: 18px;
+	font-family: Calibri;
+	color: #666666;
+}
+
+#piano-handler #arrow {
+	display: inline-block;
+	border: 6px solid #999999;
+	margin-bottom: 3px;
+	margin-right: 5px;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+}
+
+#piano-handler.handler-open #arrow {
+	border-top-color: #999999;
+	border-bottom-color: transparent;
+	margin-bottom: -3px;
+}
+
+#virtual-piano-container #shadow-eraser {
+	height: 6px;
+	z-index: 2;
+	margin-left: 4px;
+	margin-bottom: -1px;
+	width: 146px;
+	box-shadow: none;
+}
+
+.transpose {
+	padding: 4px 10px;
+	display: block;
+	margin-top: 12px;
+}

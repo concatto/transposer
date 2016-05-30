@@ -1,0 +1,57 @@
+
+<html>
+<head>
+	<title>Conversor - Grand Sheets</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/menu.css"/>
+	<link rel="shortcut icon" href="favicon.ico"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="transformador.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<script>
+		$(function() {
+			$("#virtual-sheet").on("input", function(e) {
+				$("#real-sheet").val(paraReal(e.target.value));
+			});
+			$("#increase-transposition").on("click", function() {
+				$("#real-sheet").val(transpor($("#real-sheet").val(), 1));
+			});
+			$("#decrease-transposition").on("click", function() {
+				$("#real-sheet").val(transpor($("#real-sheet").val(), -1));
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="root">
+		<div id="header">
+			<a href="/"><img src="title.png"></a>
+		</div>
+		<div id="container">
+			<div id="content">
+				<div id="main-page">
+					<p class="title">Conversor</p>
+					<p class="content-body">Ferramenta para conversão entre notação real e virtual. A partitura será transcrita automaticamente ao ser digitada em qualquer um dos campos.</p>
+					<div id="sheet-wrapper">
+						<div class="sheet-container">
+							<p class="sheet-description">Virtual</p>
+							<textarea id="virtual-sheet"></textarea>
+						</div>
+						<div class="sheet-separator"></div>
+						<div class="sheet-container">
+							<p class="sheet-description">Real</p>
+							<textarea id="real-sheet"></textarea>
+						</div>
+						<div class="sheet-separator"></div>
+						<div class="sheet-container">
+							<input type="button" id="increase-transposition" class="transpose" value="Transpôr acima"/>
+							<input type="button" id="decrease-transposition" class="transpose" value="Transpôr abaixo"/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
